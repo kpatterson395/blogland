@@ -1,0 +1,29 @@
+.blog-form {
+    margin-top: 2rem;
+    color: #505251;
+
+    label {
+        display: block;
+        margin-top: 1rem;
+    }
+}
+
+textarea {
+    width: 300px;
+    height: 100px;
+}
+
+.submit-button {
+    display: block;
+    border: none;
+    background: none;
+    margin-top: 1rem;
+    padding: .5rem;
+    border-radius: .25rem;
+    color: #5047d6;
+
+    &:hover {
+        background-color: rgba(217, 217, 219, 0.5);
+        cursor: pointer;
+    }
+}

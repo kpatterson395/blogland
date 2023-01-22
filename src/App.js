@@ -1,25 +1,32 @@
-import logo from './logo.svg';
-import './App.css';
+import BlogList from './BlogList';
+import { createBrowserRouter, createRoutesFromElements, Route, RouterProvider } from 'react-router-dom'
+import BlogDetail from './BlogDetail';
+import BlogForm from './BlogForm';
+import About from "./About"
+import HomeLayout from './HomeLayout';
+import Error from "./Error"
+import { BlogProvider } from "./blog-context"
+
+const router = createBrowserRouter(
+  createRoutesFromElements(
+    <Route path="/" element={<HomeLayout />}>
+      <Route path="/" element={<BlogList />} />
+      <Route path="/about" element={<About />} />
+      <Route path="/form" element={<BlogForm />} />
+      <Route path="/blogs/:id" element={<BlogDetail />} />
+      <Route path="*" element={<Error />} />
+    </Route>
+  )
+)
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <BlogProvider>
+      <RouterProvider router={router} />
+
+    </BlogProvider>
   );
 }
 
 export default App;
+
