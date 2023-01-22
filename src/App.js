@@ -10,11 +10,11 @@ import { BlogProvider } from "./blog-context"
 const router = createBrowserRouter(
   createRoutesFromElements(
     <Route path="/" element={<HomeLayout />}>
-      <Route path="/" element={<BlogList />} />
+      <Route path="/blogland" element={<BlogList />} />
       <Route path="/about" element={<About />} />
       <Route path="/form" element={<BlogForm />} />
       <Route path="/blogs/:id" element={<BlogDetail />} />
-      <Route path="*" element={<Error />} />
+      {/* <Route path="*" element={<Error />} /> */}
     </Route>
   )
 )

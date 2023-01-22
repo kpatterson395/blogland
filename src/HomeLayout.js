@@ -8,7 +8,7 @@ const HomeLayout = () => {
                     BlogLand
                 </header>
                 <div>
-                    <NavLink className="navbar-link" to="/">Home</NavLink>
+                    <NavLink className="navbar-link" to="/blogland">Home</NavLink>
                     <NavLink className="navbar-link" to="/about">About</NavLink>
                     <NavLink className="navbar-link" to="/form">New Blog</NavLink>
                 </div>

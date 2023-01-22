@@ -17,33 +17,37 @@ const BlogForm = () => {
         setTitle("")
         setAuthor("")
         setData("")
-        navigate("/")
+        navigate("/blogland")
     }
 
     return (
-        <form className='blog-form' onSubmit={handleSubmit}>
-            <label htmlFor="title">Title</label>
-            <input
-                type="text"
-                name="title"
-                value={title}
-                onChange={(e) => setTitle(e.target.value)}
-            />
-            <label htmlFor="author">Author</label>
-            <input
-                type="text"
-                name="author"
-                value={author}
-                onChange={(e) => setAuthor(e.target.value)}
-            />
-            <label htmlFor="data">Data</label>
-            <textarea
-                name="data"
-                value={data}
-                onChange={(e) => setData(e.target.value)}
-            />
-            <button className='submit-button'>Submit</button>
-        </form>
+        <div className='blog-form'>
+            <h2>Add a new blog</h2>
+            <form onSubmit={handleSubmit}>
+                <label htmlFor="title">Title</label>
+                <input
+                    type="text"
+                    name="title"
+                    value={title}
+                    onChange={(e) => setTitle(e.target.value)}
+                />
+                <label htmlFor="author">Author</label>
+                <input
+                    type="text"
+                    name="author"
+                    value={author}
+                    onChange={(e) => setAuthor(e.target.value)}
+                />
+                <label htmlFor="data">Data</label>
+                <textarea
+                    name="data"
+                    value={data}
+                    onChange={(e) => setData(e.target.value)}
+                />
+                <button className='submit-button'>Submit</button>
+            </form>
+        </div>
+
     );
 }
 

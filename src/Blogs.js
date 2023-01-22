@@ -10,7 +10,7 @@ const Blog = ({ title, author, data, id }) => {
         <div className='blog-item'>
             <h1>{title}</h1>
             <h3>{author}</h3>
-            <p>{`${data.slice(0, 10)}...`}</p>
+            <p>{`${data.slice(0, 25)}...`}</p>
             <Link to={`/blogs/${id}`}>Read More</Link>
             <span className="material-symbols-outlined" onClick={() => dispatch({ type: "DELETE", id })}>
                 delete
