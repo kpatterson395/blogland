@@ -50,3 +50,27 @@ nav {
         cursor: pointer;
     }
 }
+
+.Blog-edit {
+
+    input,
+    textarea {
+        display: block;
+        margin: 1rem 0;
+    }
+
+    button {
+        display: block;
+        border: none;
+        background: none;
+        margin-top: 1rem;
+        padding: .5rem;
+        border-radius: .25rem;
+        color: #5047d6;
+
+        &:hover {
+            background-color: rgba(217, 217, 219, 0.5);
+            cursor: pointer;
+        }
+    }
+}
